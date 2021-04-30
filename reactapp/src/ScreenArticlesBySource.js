@@ -19,7 +19,7 @@ function ScreenArticlesBySource(props) {
 
   useEffect(() => {
     const findArticles = async() => {
-      const data = await fetch(`https://newsapi.org/v2/top-headlines?sources=${id}&apiKey=b32c8b844d1243b1a7998d8228910f50`)
+      const data = await fetch(`https://newsapi.org/v2/top-headlines?sources=${id}&apiKey=b93ca71656424a3a860235dfb732da21`)
       const body = await data.json()
       console.log(body)
       setArticleList(body.articles) 
