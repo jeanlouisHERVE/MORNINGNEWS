@@ -28,7 +28,7 @@ function ScreenArticlesBySource(props) {
 
     findArticles();
   }, []);
-
+console.log('test token', props.myToken)
   var addArticleToBDD = async (article) => {
     await fetch("/myarticles", {
       method: "POST",
@@ -113,4 +113,8 @@ function mapDispatchToProps(dispatch) {
   };
 }
 
-export default connect(null, mapDispatchToProps)(ScreenArticlesBySource);
+function mapStateToProps(state) {
+  return { myToken: state.token }
+ }
+
+export default connect(mapStateToProps, mapDispatchToProps)(ScreenArticlesBySource);

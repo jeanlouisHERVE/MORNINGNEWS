@@ -12,7 +12,7 @@ const userSchema = mongoose.Schema({
     email: String,
     password: String,
     token: String,
-    myarticles : myarticlesSchema
+    myarticles : [myarticlesSchema]
 })
 
 const userModel = mongoose.model('users', userSchema)
