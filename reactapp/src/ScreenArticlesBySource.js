@@ -112,7 +112,9 @@ function mapDispatchToProps(dispatch){
     addToWishList: function(article){
       dispatch({type: 'addArticle',
         articleLiked: article
+        
       })
+      console.log(article)
     }
   }
 }

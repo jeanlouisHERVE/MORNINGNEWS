@@ -5,6 +5,7 @@ var uid2 = require('uid2')
 var bcrypt = require('bcrypt');
 
 var userModel = require('../models/users')
+var myarticlesModel = require('../models/myarticles')
 
 
 router.post('/sign-up', async function(req,res,next){
