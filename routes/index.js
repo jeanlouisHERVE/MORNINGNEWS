@@ -5,7 +5,6 @@ var uid2 = require('uid2')
 var bcrypt = require('bcrypt');
 
 var userModel = require('../models/users')
-var myarticlesModel = require('../models/myarticles')
 
 
 router.post('/sign-up', async function(req,res,next){
@@ -91,6 +90,13 @@ router.post('/sign-in', async function(req,res,next){
   res.json({result, user, error, token})
 
 
+})
+
+router.post('/myarticles', async function(req,res,next){
+  var result = false
+  var myarticlesinJSON = JSON.parse(req.body.article)
+console.log('article json', myarticlesinJSON)
+  res.json({result})
 })
 
 module.exports = router;
